@@ -1,0 +1,27 @@
+name: lego_app
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  design_system:
+    path: ../../core/design_system
+  flutter:
+    sdk: flutter
+  lego_configuration:
+    path: ../lego_configuration
+  lego_navigation:
+    path: ../lego_navigation
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true

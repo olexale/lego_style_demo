@@ -1,0 +1,22 @@
+name: lego_navigation
+description: Navigation for Lego demo
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get_it: ^7.2.0
+  go_router: ^4.2.8
+  harry_potter:
+    path: ../../feature/harry_potter
+  lego_list:
+    path: ../../feature/lego_list
+
+dev_dependencies:
+
+  flutter_lints: ^2.0.0
