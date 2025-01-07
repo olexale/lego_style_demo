@@ -1,0 +1,128 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "lego_app",
+            "cwd": "app\\lego_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "lego_app (profile mode)",
+            "cwd": "app\\lego_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lego_app (release mode)",
+            "cwd": "app\\lego_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "lego_configuration",
+            "cwd": "app\\lego_configuration",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "lego_configuration (profile mode)",
+            "cwd": "app\\lego_configuration",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lego_configuration (release mode)",
+            "cwd": "app\\lego_configuration",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "lego_navigation",
+            "cwd": "app\\lego_navigation",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "lego_navigation (profile mode)",
+            "cwd": "app\\lego_navigation",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lego_navigation (release mode)",
+            "cwd": "app\\lego_navigation",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "design_system",
+            "cwd": "core\\design_system",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "design_system (profile mode)",
+            "cwd": "core\\design_system",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "design_system (release mode)",
+            "cwd": "core\\design_system",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "harry_potter",
+            "cwd": "feature\\harry_potter",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "harry_potter (profile mode)",
+            "cwd": "feature\\harry_potter",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "harry_potter (release mode)",
+            "cwd": "feature\\harry_potter",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "lego_list",
+            "cwd": "feature\\lego_list",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "lego_list (profile mode)",
+            "cwd": "feature\\lego_list",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lego_list (release mode)",
+            "cwd": "feature\\lego_list",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
