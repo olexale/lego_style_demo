@@ -5,7 +5,6 @@ part 'hp_state.freezed.dart';
 
 @freezed
 class HPState with _$HPState {
-  const factory HPState({
-    @Default(<Character>[]) List<Character> characters,
-  }) = _HPState;
+  const factory HPState({@Default(<Character>[]) List<Character> characters}) =
+      _HPState;
 }

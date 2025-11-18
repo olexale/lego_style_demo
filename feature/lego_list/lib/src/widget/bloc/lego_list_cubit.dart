@@ -10,11 +10,11 @@ class LegoListCubit extends Cubit<LegoListState> {
     LegoListConfigurator configurator,
     this._navigation,
   ) : super(
-          LegoListState(
-            legoSets: repository.getLegoSets(),
-            grid: configurator.gridRepresentation,
-          ),
-        );
+        LegoListState(
+          legoSets: repository.getLegoSets(),
+          grid: configurator.gridRepresentation,
+        ),
+      );
 
   final LegoListNavigation _navigation;
 

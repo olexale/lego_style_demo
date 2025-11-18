@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:harry_potter/src/widget/hp_list/localization/translations/hp.i69n.dart';
 
-final _translations = <String, Hp Function()>{
-  'en': () => const Hp(),
-};
+final _translations = <String, Hp Function()>{'en': () => const Hp()};
 
 class HpLocalizations {
   const HpLocalizations(this.translations);
@@ -13,8 +11,9 @@ class HpLocalizations {
   static const LocalizationsDelegate<HpLocalizations> delegate =
       _HpLocalizationsDelegate();
 
-  static final List<Locale> supportedLocales =
-      _translations.keys.map((x) => Locale(x)).toList();
+  static final List<Locale> supportedLocales = _translations.keys
+      .map((x) => Locale(x))
+      .toList();
 
   static Future<HpLocalizations> load(Locale locale) =>
       Future.value(HpLocalizations(_translations[locale.languageCode]!()));

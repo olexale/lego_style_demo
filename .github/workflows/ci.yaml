@@ -1,0 +1,52 @@
+# GitHub Actions workflow for LEGO Style Demo Monorepo using Melos
+# See https://github.com/marketplace/actions/melos-action for details
+
+name: CI
+
+on:
+  push:
+    branches: [main, integration/*]
+  pull_request:
+    branches: [main, integration/*]
+
+jobs:
+  melos-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Melos Bootstrap & Checks
+        uses: bluefireteam/melos-action@v3
+        with:
+          run-bootstrap: true
+
+      # Optionally, add more melos-action parameters here, e.g.:
+      #   run-versioning: true
+      #   publish-dry-run: true
+      #   create-pr: true
+      #   tag: true
+
+      # Example: Run static analysis after bootstrap
+      - name: Analyze
+        run: melos exec -- flutter analyze
+
+      - name: Check code formatting
+        run: melos exec -- dart format --set-exit-if-changed .
+
+
+      # Example: Run tests (uncomment if needed)
+      # - name: Run tests
+      #   run: melos exec -- "flutter test"
+
+      # Example: Upload code coverage (optional)
+      # - name: Upload code coverage
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: coverage-report
+      #     path: coverage/

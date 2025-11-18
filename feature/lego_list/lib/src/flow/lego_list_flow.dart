@@ -22,11 +22,11 @@ class _LegoListFlowState extends State<LegoListFlow> {
 
   @override
   Widget build(BuildContext context) => Localizations.override(
-        context: context,
-        delegates: AppLocalizations.localizationsDelegates,
-        child: BlocProvider(
-          create: (_) => GetIt.I.get<LegoListCubit>(),
-          child: const LegoListPage(),
-        ),
-      );
+    context: context,
+    delegates: AppLocalizations.localizationsDelegates,
+    child: BlocProvider(
+      create: (_) => GetIt.I.get<LegoListCubit>(),
+      child: const LegoListPage(),
+    ),
+  );
 }

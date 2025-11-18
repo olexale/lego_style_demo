@@ -5,7 +5,6 @@ part 'harry_potter_state.freezed.dart';
 
 @freezed
 class HarryPotterState with _$HarryPotterState {
-  const factory HarryPotterState({
-    Character? selectedCharacter,
-  }) = _HarryPotterState;
+  const factory HarryPotterState({Character? selectedCharacter}) =
+      _HarryPotterState;
 }

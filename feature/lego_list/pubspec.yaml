@@ -5,7 +5,8 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: "^3.9.0"
+resolution: workspace
 
 dependencies:
   equatable: ^2.0.5
@@ -15,7 +16,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   get_it: ^7.2.0
-  intl: ^0.17.0
+  intl: ^0.20.0
 
 dev_dependencies:
   bdd_widget_test: ^1.4.2

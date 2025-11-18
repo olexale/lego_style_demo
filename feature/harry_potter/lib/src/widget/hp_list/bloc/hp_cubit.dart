@@ -6,5 +6,5 @@ import 'package:injectable/injectable.dart';
 @injectable
 class HPCubit extends Cubit<HPState> {
   HPCubit(HPRepository repository)
-      : super(HPState(characters: repository.getCharacters()));
+    : super(HPState(characters: repository.getCharacters()));
 }

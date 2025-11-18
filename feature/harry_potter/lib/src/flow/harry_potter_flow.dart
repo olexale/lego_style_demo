@@ -28,18 +28,19 @@ class _HarryPotterFlowState extends State<HarryPotterFlow> {
 
   @override
   Widget build(BuildContext context) => Localizations.override(
-      context: context,
-      delegates: const [HpLocalizations.delegate],
-      child: FlowBuilder<HarryPotterState>(
-        state: const HarryPotterState(),
-        onGeneratePages: (state, pages) {
-          return [
-            const MaterialPage(child: HpListPage()),
-            if (state.selectedCharacter != null)
-              MaterialPage(
-                child: HpDetailsPage(character: state.selectedCharacter!),
-              ),
-          ];
-        },
-      ));
+    context: context,
+    delegates: const [HpLocalizations.delegate],
+    child: FlowBuilder<HarryPotterState>(
+      state: const HarryPotterState(),
+      onGeneratePages: (state, pages) {
+        return [
+          const MaterialPage(child: HpListPage()),
+          if (state.selectedCharacter != null)
+            MaterialPage(
+              child: HpDetailsPage(character: state.selectedCharacter!),
+            ),
+        ];
+      },
+    ),
+  );
 }

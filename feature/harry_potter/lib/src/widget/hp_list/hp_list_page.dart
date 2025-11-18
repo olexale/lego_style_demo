@@ -12,25 +12,29 @@ class HpListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-      appBar: AppBar(
-        leading: BackButton(
-            onPressed: () => context.flow<HarryPotterState>().complete()),
-        title: Text(HpLocalizations.of(context).chooseCharacter),
+    appBar: AppBar(
+      leading: BackButton(
+        onPressed: () => context.flow<HarryPotterState>().complete(),
       ),
-      body: BlocProvider<HPCubit>(
-          create: (_) => GetIt.I.get<HPCubit>(),
-          child: BlocBuilder<HPCubit, HPState>(builder: (context, state) {
-            return ListView.builder(
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(state.characters[index].name),
-                  onTap: () => context.flow<HarryPotterState>().update(
-                        (s) => s.copyWith(
-                            selectedCharacter: state.characters[index]),
-                      ),
-                );
-              },
-              itemCount: state.characters.length,
-            );
-          })));
+      title: Text(HpLocalizations.of(context).chooseCharacter),
+    ),
+    body: BlocProvider<HPCubit>(
+      create: (_) => GetIt.I.get<HPCubit>(),
+      child: BlocBuilder<HPCubit, HPState>(
+        builder: (context, state) {
+          return ListView.builder(
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text(state.characters[index].name),
+                onTap: () => context.flow<HarryPotterState>().update(
+                  (s) => s.copyWith(selectedCharacter: state.characters[index]),
+                ),
+              );
+            },
+            itemCount: state.characters.length,
+          );
+        },
+      ),
+    ),
+  );
 }

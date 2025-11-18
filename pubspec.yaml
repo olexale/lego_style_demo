@@ -1,0 +1,21 @@
+name: lego_style_demo
+publish_to: none
+
+environment:
+  sdk: ^3.9.0
+
+workspace:
+  - app/lego_app
+  - app/lego_configuration
+  - app/lego_navigation
+  - core/design_system
+  - feature/harry_potter
+  - feature/lego_list
+
+dev_dependencies:
+  melos: ^7.0.0-dev.9
+  build_runner: ^2.4.0
+
+melos:
+  # All of the content of your previous melos.yaml file
+  # (Except for the packages and name)

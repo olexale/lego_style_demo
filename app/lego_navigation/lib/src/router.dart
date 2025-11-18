@@ -5,16 +5,11 @@ import 'package:lego_list/lego_list.dart';
 
 final router = GoRouter(
   routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const LegoListFlow(),
-    ),
+    GoRoute(path: '/', builder: (context, state) => const LegoListFlow()),
     GoRoute(
       path: '/universe/hp',
       builder: (context, state) => const HarryPotterFlow(),
     ),
   ],
-  errorBuilder: (context, state) => Scaffold(
-    appBar: AppBar(),
-  ),
+  errorBuilder: (context, state) => Scaffold(appBar: AppBar()),
 );
